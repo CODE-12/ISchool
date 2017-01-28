@@ -13,6 +13,7 @@ namespace ISchool.Server.Configuration
     public interface IConfigData
     {
         [OperationContract]
-        bool AddStudent(string Acc, string Name,string Specialize,string BirthDate,string Registry,string StateType, string Nationality, string IdType, string IdNumber, string AcadmyMan, string School);
+        bool PutStudent(string Acc, string Name, string Specialize, string BirthDate, string Registry, string StateType, string Nationality, string IdType, string IdNumber, string AcadmyMan, string School);
+        
     }
 }
