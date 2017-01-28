@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ISchool.Server.Configuration.Setter" CodeBehind="Setter.svc.cs" %>

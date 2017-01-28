@@ -89,16 +89,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configuration\ConfigData.svc" />
+    <Content Include="Configuration\Setter.svc" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\ConfigData.svc.cs">
-      <DependentUpon>ConfigData.svc</DependentUpon>
+    <Compile Include="Configuration\ISetter.cs" />
+    <Compile Include="Configuration\Setter.svc.cs">
+      <DependentUpon>Setter.svc</DependentUpon>
     </Compile>
-    <Compile Include="Configuration\IConfigData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
