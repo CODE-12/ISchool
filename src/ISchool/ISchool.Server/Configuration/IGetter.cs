@@ -12,8 +12,12 @@ namespace ISchool.Server.Configuration
     public interface IGetter
     {
         [OperationContract]
-        int UpdateStudentPhoneNumber(int StudentId, string PhoneNumber);
+        string GetStudentPhoneNumber(int StudentId);
         [OperationContract]
-        int UpdateStudentInfo(int StudentId, string Name, string Specialization, string Nationality, string NationalId, string EnterDate, int AcademicSupervisor);
+        string GetStudentName(int StudentId);
+        [OperationContract]
+        int GetStudentAcademicSupervisor(int StudentId);
+        [OperationContract]
+        
     }
 }
