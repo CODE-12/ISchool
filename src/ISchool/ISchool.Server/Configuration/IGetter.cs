@@ -19,5 +19,10 @@ namespace ISchool.Server.Configuration
         int GetStudentAcademicSupervisor(int StudentId);
         [OperationContract]
         List<string> GetStudentSchudle(int StudnetId);
+        [OperationContract]
+        int GetStudentIdByName(string Name);
+        [OperationContract]
+        string GetStudentNameById(int StudnetId);
+
     }
 }
