@@ -7,16 +7,15 @@ using System.Text;
 
 namespace ISchool.Server.Configuration
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ISetter" in both code and config file together.
     [ServiceContract]
     public interface ISetter
     {
         [OperationContract]
         int PutTeacher(string UserName, string RealyName, string Password, bool IsAdmin = false);
         [OperationContract]
-        int PutStudent(string Name, string Specialization, string Nationality, string NationalId, string EnterDate, int AcademicSupervisor);
+        int PutStudent(string StudentAcc, string Name, string Specialization, string Nationality, string NationalId, string EnterDate, int AcademicSupervisor);
         [OperationContract]
-        int PutSchedualForStudent(int Student, int Sub1, int Sub2, int Sub3, int Sub4, int Sub5, int Sub6, int Sub7, int Sub8);
+        int PutSchedualForStudent(int StudentId, int Sub1, int Sub2, int Sub3, int Sub4, int Sub5, int Sub6, int Sub7, int Sub8);
         [OperationContract]
         int PutNotification(int SenderId, string Title, string NotificationBody);
         [OperationContract]

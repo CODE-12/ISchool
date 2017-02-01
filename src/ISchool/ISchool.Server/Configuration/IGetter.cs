@@ -7,7 +7,6 @@ using System.Text;
 
 namespace ISchool.Server.Configuration
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IGetter" in both code and config file together.
     [ServiceContract]
     public interface IGetter
     {
@@ -23,6 +22,13 @@ namespace ISchool.Server.Configuration
         int GetStudentIdByName(string Name);
         [OperationContract]
         string GetStudentNameById(int StudnetId);
-
+        [OperationContract]
+        string GetStudentSpecialization(int StudentId);
+        [OperationContract]
+        string GetStudentNationality(int StudnetId);
+        [OperationContract]
+        string GetStudentNationalId(int studntId);
+        [OperationContract]
+        string GetStudentEnterTime(int studntId);
     }
 }
