@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,11 +51,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISchool.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ISchool.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ISchool.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ISchool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ISchool.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Absences.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_AbsenceTypes.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Excuses.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_NotiFication.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Permissions.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Schedules.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Students.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Subjects.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="isch_Users.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ISchool.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="ISchool.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ISchool.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ISchool.edmx.diagram">
+      <DependentUpon>ISchool.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ISchool.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ISchool.edmx</DependentUpon>
+      <LastGenOutput>ISchool.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ISchool.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ISchool.edmx</DependentUpon>
+      <LastGenOutput>ISchool.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

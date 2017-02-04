@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using ISchool.Model;
 
 namespace ISchool.Server.Configuration
 {
@@ -13,17 +14,74 @@ namespace ISchool.Server.Configuration
     {
         public int ChangeStudentPhoneNumber(int StudentId, string PhoneNumber)
         {
-            throw new NotImplementedException();
+            using (ISchoolData Data = new ISchoolData())
+            {
+                try
+                {
+                    var Student = Data.isch_Students.Where(stu => stu.st_id == StudentId);
+                    if (Student.Count() != 1)
+                        return 0;
+                    Student.First().st_PhoneNumber = PhoneNumber;
+                    Data.SaveChanges();
+                    return 1;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
+            }
         }
 
         public int PutAbsence(int StudentId, int AbsenceType, DateTime Date, int Subject)
         {
-            throw new NotImplementedException();
+            using (ISchoolData Data = new ISchoolData())
+            {
+                try
+                {
+                    Data.isch_Absences.Add(new isch_Absences() {
+                        a_Date = DateTime.Now,
+                        a_Student = StudentId,
+                        a_Type = AbsenceType,
+                        a_Subject = Subject
+                    });
+                    Data.SaveChanges();
+                    return 1;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
+            }
         }
 
         public int PutExcuse(int AbsenceId, int ByUserId, string Excuse, DateTime EnterDate)
         {
-            throw new NotImplementedException();
+            using (ISchoolData Data = new ISchoolData())
+            {
+                try
+                {
+                    DateTime Now = DateTime.Now;
+                    Data.isch_Excuses.Add(new isch_Excuses() {
+                        e_EnterDate = Now,
+                        e_Text = Excuse,
+                        e_User = ByUserId,
+                    });
+                    Data.SaveChanges();
+                    var SelectedExcuse = Data.isch_Excuses.Where(Excu => (Excu.e_EnterDate == Now && Excu.e_Text == Excuse && Excu.e_User == ByUserId));
+                    if (SelectedExcuse.Count() != 1)
+                        return 0;
+                    var Absence = Data.isch_Absences.Where(abs => abs.a_id == AbsenceId);
+                    if (Absence.Count() != 1)
+                        return 0;
+                    Absence.First().a_Excuse = SelectedExcuse.First().e_id;
+                    Data.SaveChanges();
+                    return 1;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
+            }
         }
 
         public int PutNotification(int SenderId, string Title, string NotificationBody)
