@@ -86,7 +86,21 @@ namespace ISchool.Server.Configuration
 
         public int PutNotification(int SenderId, string Title, string NotificationBody)
         {
-            throw new NotImplementedException();
+            using (ISchoolData Data = new ISchoolData())
+            {
+                try
+                {
+                    Data.isch_NotiFication.Add(new isch_NotiFication() {
+
+                    });
+                    Data.SaveChanges();
+                    return 1;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
+            }
         }
 
         public int PutSchedualForStudent(int StudentId, int Sub1, int Sub2, int Sub3, int Sub4, int Sub5, int Sub6, int Sub7, int Sub8)
