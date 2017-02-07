@@ -7,54 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
-//saleh 
 namespace ISchool.Teacher
 {
-    public partial class Form1 :Form
+    public partial class meen : Form
     {
-        public Form1()
+        public meen()
         {
             InitializeComponent();
         }
-       
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-          
+            ab kkk = new ab();
+            kkk.ShowDialog();
 
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-          
+            warn kkk = new warn();
+            kkk.ShowDialog();
            
+
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-          
-
+            warn11 kkk = new warn11();
+            kkk.ShowDialog();
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+           setiing kkk = new setiing ();
+            kkk.ShowDialog();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void p1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-      
     }
 }

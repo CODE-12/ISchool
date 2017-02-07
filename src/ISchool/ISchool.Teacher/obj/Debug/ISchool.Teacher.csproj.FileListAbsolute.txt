@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.exe.config
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.exe
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.pdb
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\MetroFramework.dll
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Form1.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Properties.Resources.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.exe
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.pdb
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.abce.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.ab.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.meen.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.setiing.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn.resources
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn11.resources
