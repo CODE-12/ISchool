@@ -19,7 +19,9 @@ namespace ISchool.Model
         public string n_text { get; set; }
         public int n_EnterByUser { get; set; }
         public System.DateTime n_EnterDate { get; set; }
+        public int n_ToUser { get; set; }
     
         public virtual isch_Users isch_Users { get; set; }
+        public virtual isch_Users isch_Users1 { get; set; }
     }
 }

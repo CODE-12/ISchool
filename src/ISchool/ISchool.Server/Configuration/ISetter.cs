@@ -17,7 +17,7 @@ namespace ISchool.Server.Configuration
         [OperationContract]
         int PutSchedualForStudent(int StudentId, int Sub1, int Sub2, int Sub3, int Sub4, int Sub5, int Sub6, int Sub7, int Sub8);
         [OperationContract]
-        int PutNotification(int SenderId, string Title, string NotificationBody);
+        int PutNotification(int SenderId, string Title, string NotificationBody, int ToUser);
         [OperationContract]
         int PutSubject(int TeacherId, string Type, string Class, string Place);
         [OperationContract]

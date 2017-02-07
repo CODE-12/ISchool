@@ -84,14 +84,20 @@ namespace ISchool.Server.Configuration
             }
         }
 
-        public int PutNotification(int SenderId, string Title, string NotificationBody)
+        public int PutNotification(int SenderId, string Title, string NotificationBody, int ToUser)
         {
             using (ISchoolData Data = new ISchoolData())
             {
+                if (Data.isch_Users.Where(Tech => Tech.u_id == SenderId).Count() != 1 || Data.isch_Users.Where(Tech => Tech.u_id == ToUser).Count() != 1)
+                    return 0;
                 try
                 {
                     Data.isch_NotiFication.Add(new isch_NotiFication() {
-
+                        n_EnterByUser = SenderId,
+                        n_title = Title,
+                        n_text = NotificationBody,
+                        n_ToUser = ToUser,
+                        n_EnterDate = DateTime.Now
                     });
                     Data.SaveChanges();
                     return 1;
@@ -105,7 +111,62 @@ namespace ISchool.Server.Configuration
 
         public int PutSchedualForStudent(int StudentId, int Sub1, int Sub2, int Sub3, int Sub4, int Sub5, int Sub6, int Sub7, int Sub8)
         {
-            throw new NotImplementedException();
+            using (ISchoolData Data = new ISchoolData())
+            {
+                try
+                {
+                    var Student = Data.isch_Students.Where(stu => stu.st_id == StudentId);
+                    if (Student.Count() != 1)
+                        return 0;
+                    isch_Schedules Sch = new isch_Schedules();
+                    var Q = Data.isch_Schedules.Where(subj =>
+                    subj.s_Subject1 == Sub1 &&
+                    subj.s_Subject2 == Sub2 &&
+                    subj.s_Subject3 == Sub3 &&
+                    subj.s_Subject4 == Sub4 &&
+                    subj.s_Subject5 == Sub5 &&
+                    subj.s_Subject6 == Sub6 &&
+                    subj.s_Subject7 == Sub7 &&
+                    subj.s_Subject8 == Sub8);
+                    if (Q.Count() > 0)
+                    {
+                        Sch = Q.First();
+                        goto Go;
+                    }
+                    Data.isch_Schedules.Add(new isch_Schedules() {
+                        s_Subject1 = Sub1,
+                        s_Subject2 = Sub2,
+                        s_Subject3 = Sub3,
+                        s_Subject4 = Sub4,
+                        s_Subject5 = Sub5,
+                        s_Subject6 = Sub6,
+                        s_Subject7 = Sub7,
+                        s_Subject8 = Sub8,
+                    });
+                    Data.SaveChanges();
+                    var Q = Data.isch_Schedules.Where(subj =>
+                   subj.s_Subject1 == Sub1 &&
+                   subj.s_Subject2 == Sub2 &&
+                   subj.s_Subject3 == Sub3 &&
+                   subj.s_Subject4 == Sub4 &&
+                   subj.s_Subject5 == Sub5 &&
+                   subj.s_Subject6 == Sub6 &&
+                   subj.s_Subject7 == Sub7 &&
+                   subj.s_Subject8 == Sub8);
+                    if (Q.Count() > 0)
+                        Sch = Q.First();
+                    else
+                        return 0;
+                    Go:;
+                    Student.First().st_Schedule = Sch.s_id;
+                    Data.SaveChanges();
+                    return 1;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
+            }
         }
 
         public int PutStudent(string StudentAcc, string Name, string Specialization, string Nationality, string NationalId, string EnterDate, int AcademicSupervisor)

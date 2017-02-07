@@ -20,6 +20,7 @@ namespace ISchool.Model
             this.isch_Excuses = new HashSet<isch_Excuses>();
             this.isch_NotiFication = new HashSet<isch_NotiFication>();
             this.isch_Subjects = new HashSet<isch_Subjects>();
+            this.isch_NotiFication1 = new HashSet<isch_NotiFication>();
         }
     
         public int u_id { get; set; }
@@ -35,5 +36,7 @@ namespace ISchool.Model
         public virtual isch_Permissions isch_Permissions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<isch_Subjects> isch_Subjects { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<isch_NotiFication> isch_NotiFication1 { get; set; }
     }
 }

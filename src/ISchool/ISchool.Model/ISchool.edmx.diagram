@@ -32,6 +32,7 @@
         <AssociationConnector Association="ISchool.Data.FK_isch_Schedules_isch_Subjects7" ManuallyRouted="false" />
         <AssociationConnector Association="ISchool.Data.FK_isch_Students_isch_Schedules" ManuallyRouted="false" />
         <AssociationConnector Association="ISchool.Data.FK_isch_Subjects_isch_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchool.Data.FK_isch_NotiFication_isch_Users1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
