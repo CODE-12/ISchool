@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISchool.Data" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="isch_Absences">
+    <Key>
+      <PropertyRef Name="a_id" />
+    </Key>
+    <Property Name="a_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="a_Student" Type="Int32" Nullable="false" />
+    <Property Name="a_Type" Type="Int32" Nullable="false" />
+    <Property Name="a_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="a_Excuse" Type="Int32" />
+    <Property Name="a_Subject" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="isch_AbsenceTypes" Relationship="Self.FK_isch_Absences_isch_AbsenceTypes" FromRole="isch_Absences" ToRole="isch_AbsenceTypes" />
+    <NavigationProperty Name="isch_Excuses" Relationship="Self.FK_isch_Absences_isch_Excuses" FromRole="isch_Absences" ToRole="isch_Excuses" />
+    <NavigationProperty Name="isch_Students" Relationship="Self.FK_isch_Absences_isch_Students1" FromRole="isch_Absences" ToRole="isch_Students" />
+    <NavigationProperty Name="isch_Subjects" Relationship="Self.FK_isch_Absences_isch_Subjects" FromRole="isch_Absences" ToRole="isch_Subjects" />
+  </EntityType>
+  <EntityType Name="isch_AbsenceTypes">
+    <Key>
+      <PropertyRef Name="at_id" />
+    </Key>
+    <Property Name="at_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="at_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="isch_Absences" Relationship="Self.FK_isch_Absences_isch_AbsenceTypes" FromRole="isch_AbsenceTypes" ToRole="isch_Absences" />
+  </EntityType>
+  <EntityType Name="isch_Excuses">
+    <Key>
+      <PropertyRef Name="e_id" />
+    </Key>
+    <Property Name="e_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="e_User" Type="Int32" Nullable="false" />
+    <Property Name="e_Text" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="e_EnterDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="isch_Absences" Relationship="Self.FK_isch_Absences_isch_Excuses" FromRole="isch_Excuses" ToRole="isch_Absences" />
+    <NavigationProperty Name="isch_Users" Relationship="Self.FK_isch_Excuses_isch_Users" FromRole="isch_Excuses" ToRole="isch_Users" />
+  </EntityType>
+  <EntityType Name="isch_NotiFication">
+    <Key>
+      <PropertyRef Name="n_id" />
+    </Key>
+    <Property Name="n_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="n_title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="n_text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="n_EnterByUser" Type="Int32" Nullable="false" />
+    <Property Name="n_EnterDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="isch_Users" Relationship="Self.FK_isch_NotiFication_isch_Users" FromRole="isch_NotiFication" ToRole="isch_Users" />
+  </EntityType>
+  <EntityType Name="isch_Permissions">
+    <Key>
+      <PropertyRef Name="p_id" />
+    </Key>
+    <Property Name="p_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="p_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="p_IsAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="p_IsTeacher" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="isch_Users" Relationship="Self.FK_users_permissions" FromRole="isch_Permissions" ToRole="isch_Users" />
+  </EntityType>
+  <EntityType Name="isch_Schedules">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_Subject1" Type="Int32" />
+    <Property Name="s_Subject2" Type="Int32" />
+    <Property Name="s_Subject3" Type="Int32" />
+    <Property Name="s_Subject4" Type="Int32" />
+    <Property Name="s_Subject5" Type="Int32" />
+    <Property Name="s_Subject6" Type="Int32" />
+    <Property Name="s_Subject7" Type="Int32" />
+    <Property Name="s_Subject8" Type="Int32" />
+    <NavigationProperty Name="isch_Subjects" Relationship="Self.FK_isch_Schedules_isch_Subjects" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects1" Relationship="Self.FK_isch_Schedules_isch_Subjects1" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects2" Relationship="Self.FK_isch_Schedules_isch_Subjects2" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects3" Relationship="Self.FK_isch_Schedules_isch_Subjects3" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects4" Relationship="Self.FK_isch_Schedules_isch_Subjects4" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects5" Relationship="Self.FK_isch_Schedules_isch_Subjects5" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects6" Relationship="Self.FK_isch_Schedules_isch_Subjects6" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Subjects7" Relationship="Self.FK_isch_Schedules_isch_Subjects7" FromRole="isch_Schedules" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_Students" Relationship="Self.FK_isch_Students_isch_Schedules" FromRole="isch_Schedules" ToRole="isch_Students" />
+  </EntityType>
+  <EntityType Name="isch_Students">
+    <Key>
+      <PropertyRef Name="st_id" />
+    </Key>
+    <Property Name="st_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="st_acc" Type="Int32" Nullable="false" />
+    <Property Name="st_Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="st_Specialization" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="st_Nationality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="st_NationalId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="st_EnterTime" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="st_PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="st_AcademyUser" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="st_Schedule" Type="Int32" />
+    <NavigationProperty Name="isch_Absences" Relationship="Self.FK_isch_Absences_isch_Students1" FromRole="isch_Students" ToRole="isch_Absences" />
+    <NavigationProperty Name="isch_Schedules" Relationship="Self.FK_isch_Students_isch_Schedules" FromRole="isch_Students" ToRole="isch_Schedules" />
+  </EntityType>
+  <EntityType Name="isch_Subjects">
+    <Key>
+      <PropertyRef Name="sub_id" />
+    </Key>
+    <Property Name="sub_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sub_Teacher" Type="Int32" Nullable="false" />
+    <Property Name="sub_Type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sub_Class" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sub_Place" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sub_Structure" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="isch_Absences" Relationship="Self.FK_isch_Absences_isch_Subjects" FromRole="isch_Subjects" ToRole="isch_Absences" />
+    <NavigationProperty Name="isch_Schedules" Relationship="Self.FK_isch_Schedules_isch_Subjects" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules1" Relationship="Self.FK_isch_Schedules_isch_Subjects1" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules2" Relationship="Self.FK_isch_Schedules_isch_Subjects2" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules3" Relationship="Self.FK_isch_Schedules_isch_Subjects3" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules4" Relationship="Self.FK_isch_Schedules_isch_Subjects4" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules5" Relationship="Self.FK_isch_Schedules_isch_Subjects5" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules6" Relationship="Self.FK_isch_Schedules_isch_Subjects6" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Schedules7" Relationship="Self.FK_isch_Schedules_isch_Subjects7" FromRole="isch_Subjects" ToRole="isch_Schedules" />
+    <NavigationProperty Name="isch_Users" Relationship="Self.FK_isch_Subjects_isch_Users" FromRole="isch_Subjects" ToRole="isch_Users" />
+  </EntityType>
+  <EntityType Name="isch_Users">
+    <Key>
+      <PropertyRef Name="u_id" />
+    </Key>
+    <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="u_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_RealyName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_Pass" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_Permission" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="isch_Excuses" Relationship="Self.FK_isch_Excuses_isch_Users" FromRole="isch_Users" ToRole="isch_Excuses" />
+    <NavigationProperty Name="isch_NotiFication" Relationship="Self.FK_isch_NotiFication_isch_Users" FromRole="isch_Users" ToRole="isch_NotiFication" />
+    <NavigationProperty Name="isch_Permissions" Relationship="Self.FK_users_permissions" FromRole="isch_Users" ToRole="isch_Permissions" />
+    <NavigationProperty Name="isch_Subjects" Relationship="Self.FK_isch_Subjects_isch_Users" FromRole="isch_Users" ToRole="isch_Subjects" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_isch_Absences_isch_AbsenceTypes">
+    <End Role="isch_AbsenceTypes" Type="Self.isch_AbsenceTypes" Multiplicity="1" />
+    <End Role="isch_Absences" Type="Self.isch_Absences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_AbsenceTypes">
+        <PropertyRef Name="at_id" />
+      </Principal>
+      <Dependent Role="isch_Absences">
+        <PropertyRef Name="a_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Absences_isch_Excuses">
+    <End Role="isch_Excuses" Type="Self.isch_Excuses" Multiplicity="1" />
+    <End Role="isch_Absences" Type="Self.isch_Absences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Excuses">
+        <PropertyRef Name="e_id" />
+      </Principal>
+      <Dependent Role="isch_Absences">
+        <PropertyRef Name="a_Subject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Absences_isch_Students1">
+    <End Role="isch_Students" Type="Self.isch_Students" Multiplicity="1" />
+    <End Role="isch_Absences" Type="Self.isch_Absences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Students">
+        <PropertyRef Name="st_id" />
+      </Principal>
+      <Dependent Role="isch_Absences">
+        <PropertyRef Name="a_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Absences_isch_Subjects">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="1" />
+    <End Role="isch_Absences" Type="Self.isch_Absences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Absences">
+        <PropertyRef Name="a_Subject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Excuses_isch_Users">
+    <End Role="isch_Users" Type="Self.isch_Users" Multiplicity="1" />
+    <End Role="isch_Excuses" Type="Self.isch_Excuses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Users">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="isch_Excuses">
+        <PropertyRef Name="e_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_NotiFication_isch_Users">
+    <End Role="isch_Users" Type="Self.isch_Users" Multiplicity="1" />
+    <End Role="isch_NotiFication" Type="Self.isch_NotiFication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Users">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="isch_NotiFication">
+        <PropertyRef Name="n_EnterByUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_permissions">
+    <End Role="isch_Permissions" Type="Self.isch_Permissions" Multiplicity="1" />
+    <End Role="isch_Users" Type="Self.isch_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Permissions">
+        <PropertyRef Name="p_id" />
+      </Principal>
+      <Dependent Role="isch_Users">
+        <PropertyRef Name="u_Permission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects1">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects2">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects3">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects4">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects5">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects6">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Schedules_isch_Subjects7">
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="0..1" />
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Subjects">
+        <PropertyRef Name="sub_id" />
+      </Principal>
+      <Dependent Role="isch_Schedules">
+        <PropertyRef Name="s_Subject8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Students_isch_Schedules">
+    <End Role="isch_Schedules" Type="Self.isch_Schedules" Multiplicity="0..1" />
+    <End Role="isch_Students" Type="Self.isch_Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Schedules">
+        <PropertyRef Name="s_id" />
+      </Principal>
+      <Dependent Role="isch_Students">
+        <PropertyRef Name="st_Schedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_Subjects_isch_Users">
+    <End Role="isch_Users" Type="Self.isch_Users" Multiplicity="1" />
+    <End Role="isch_Subjects" Type="Self.isch_Subjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Users">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="isch_Subjects">
+        <PropertyRef Name="sub_Teacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ISchoolData" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="isch_Absences" EntityType="Self.isch_Absences" />
+    <EntitySet Name="isch_AbsenceTypes" EntityType="Self.isch_AbsenceTypes" />
+    <EntitySet Name="isch_Excuses" EntityType="Self.isch_Excuses" />
+    <EntitySet Name="isch_NotiFication" EntityType="Self.isch_NotiFication" />
+    <EntitySet Name="isch_Permissions" EntityType="Self.isch_Permissions" />
+    <EntitySet Name="isch_Schedules" EntityType="Self.isch_Schedules" />
+    <EntitySet Name="isch_Students" EntityType="Self.isch_Students" />
+    <EntitySet Name="isch_Subjects" EntityType="Self.isch_Subjects" />
+    <EntitySet Name="isch_Users" EntityType="Self.isch_Users" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_isch_Absences_isch_AbsenceTypes" Association="Self.FK_isch_Absences_isch_AbsenceTypes">
+      <End Role="isch_AbsenceTypes" EntitySet="isch_AbsenceTypes" />
+      <End Role="isch_Absences" EntitySet="isch_Absences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Absences_isch_Excuses" Association="Self.FK_isch_Absences_isch_Excuses">
+      <End Role="isch_Excuses" EntitySet="isch_Excuses" />
+      <End Role="isch_Absences" EntitySet="isch_Absences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Absences_isch_Students1" Association="Self.FK_isch_Absences_isch_Students1">
+      <End Role="isch_Students" EntitySet="isch_Students" />
+      <End Role="isch_Absences" EntitySet="isch_Absences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Absences_isch_Subjects" Association="Self.FK_isch_Absences_isch_Subjects">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Absences" EntitySet="isch_Absences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Excuses_isch_Users" Association="Self.FK_isch_Excuses_isch_Users">
+      <End Role="isch_Users" EntitySet="isch_Users" />
+      <End Role="isch_Excuses" EntitySet="isch_Excuses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_NotiFication_isch_Users" Association="Self.FK_isch_NotiFication_isch_Users">
+      <End Role="isch_Users" EntitySet="isch_Users" />
+      <End Role="isch_NotiFication" EntitySet="isch_NotiFication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_permissions" Association="Self.FK_users_permissions">
+      <End Role="isch_Permissions" EntitySet="isch_Permissions" />
+      <End Role="isch_Users" EntitySet="isch_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects" Association="Self.FK_isch_Schedules_isch_Subjects">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects1" Association="Self.FK_isch_Schedules_isch_Subjects1">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects2" Association="Self.FK_isch_Schedules_isch_Subjects2">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects3" Association="Self.FK_isch_Schedules_isch_Subjects3">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects4" Association="Self.FK_isch_Schedules_isch_Subjects4">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects5" Association="Self.FK_isch_Schedules_isch_Subjects5">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects6" Association="Self.FK_isch_Schedules_isch_Subjects6">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Schedules_isch_Subjects7" Association="Self.FK_isch_Schedules_isch_Subjects7">
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Students_isch_Schedules" Association="Self.FK_isch_Students_isch_Schedules">
+      <End Role="isch_Schedules" EntitySet="isch_Schedules" />
+      <End Role="isch_Students" EntitySet="isch_Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_Subjects_isch_Users" Association="Self.FK_isch_Subjects_isch_Users">
+      <End Role="isch_Users" EntitySet="isch_Users" />
+      <End Role="isch_Subjects" EntitySet="isch_Subjects" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

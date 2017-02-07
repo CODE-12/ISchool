@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISchoolDataStoreContainer" CdmEntityContainer="ISchoolData">
+    <EntitySetMapping Name="isch_Absences">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Absences">
+        <MappingFragment StoreEntitySet="isch_Absences">
+          <ScalarProperty Name="a_id" ColumnName="a_id" />
+          <ScalarProperty Name="a_Student" ColumnName="a_Student" />
+          <ScalarProperty Name="a_Type" ColumnName="a_Type" />
+          <ScalarProperty Name="a_Date" ColumnName="a_Date" />
+          <ScalarProperty Name="a_Excuse" ColumnName="a_Excuse" />
+          <ScalarProperty Name="a_Subject" ColumnName="a_Subject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_AbsenceTypes">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_AbsenceTypes">
+        <MappingFragment StoreEntitySet="isch_AbsenceTypes">
+          <ScalarProperty Name="at_id" ColumnName="at_id" />
+          <ScalarProperty Name="at_Name" ColumnName="at_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_Excuses">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Excuses">
+        <MappingFragment StoreEntitySet="isch_Excuses">
+          <ScalarProperty Name="e_id" ColumnName="e_id" />
+          <ScalarProperty Name="e_User" ColumnName="e_User" />
+          <ScalarProperty Name="e_Text" ColumnName="e_Text" />
+          <ScalarProperty Name="e_EnterDate" ColumnName="e_EnterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_NotiFication">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_NotiFication">
+        <MappingFragment StoreEntitySet="isch_NotiFication">
+          <ScalarProperty Name="n_id" ColumnName="n_id" />
+          <ScalarProperty Name="n_title" ColumnName="n_title" />
+          <ScalarProperty Name="n_text" ColumnName="n_text" />
+          <ScalarProperty Name="n_EnterByUser" ColumnName="n_EnterByUser" />
+          <ScalarProperty Name="n_EnterDate" ColumnName="n_EnterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_Permissions">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Permissions">
+        <MappingFragment StoreEntitySet="isch_Permissions">
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="p_Name" ColumnName="p_Name" />
+          <ScalarProperty Name="p_IsAdmin" ColumnName="p_IsAdmin" />
+          <ScalarProperty Name="p_IsTeacher" ColumnName="p_IsTeacher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_Schedules">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Schedules">
+        <MappingFragment StoreEntitySet="isch_Schedules">
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_Subject1" ColumnName="s_Subject1" />
+          <ScalarProperty Name="s_Subject2" ColumnName="s_Subject2" />
+          <ScalarProperty Name="s_Subject3" ColumnName="s_Subject3" />
+          <ScalarProperty Name="s_Subject4" ColumnName="s_Subject4" />
+          <ScalarProperty Name="s_Subject5" ColumnName="s_Subject5" />
+          <ScalarProperty Name="s_Subject6" ColumnName="s_Subject6" />
+          <ScalarProperty Name="s_Subject7" ColumnName="s_Subject7" />
+          <ScalarProperty Name="s_Subject8" ColumnName="s_Subject8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_Students">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Students">
+        <MappingFragment StoreEntitySet="isch_Students">
+          <ScalarProperty Name="st_id" ColumnName="st_id" />
+          <ScalarProperty Name="st_acc" ColumnName="st_acc" />
+          <ScalarProperty Name="st_Name" ColumnName="st_Name" />
+          <ScalarProperty Name="st_Specialization" ColumnName="st_Specialization" />
+          <ScalarProperty Name="st_Nationality" ColumnName="st_Nationality" />
+          <ScalarProperty Name="st_NationalId" ColumnName="st_NationalId" />
+          <ScalarProperty Name="st_EnterTime" ColumnName="st_EnterTime" />
+          <ScalarProperty Name="st_PhoneNumber" ColumnName="st_PhoneNumber" />
+          <ScalarProperty Name="st_AcademyUser" ColumnName="st_AcademyUser" />
+          <ScalarProperty Name="st_Schedule" ColumnName="st_Schedule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_Subjects">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Subjects">
+        <MappingFragment StoreEntitySet="isch_Subjects">
+          <ScalarProperty Name="sub_id" ColumnName="sub_id" />
+          <ScalarProperty Name="sub_Teacher" ColumnName="sub_Teacher" />
+          <ScalarProperty Name="sub_Type" ColumnName="sub_Type" />
+          <ScalarProperty Name="sub_Class" ColumnName="sub_Class" />
+          <ScalarProperty Name="sub_Place" ColumnName="sub_Place" />
+          <ScalarProperty Name="sub_Structure" ColumnName="sub_Structure" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="isch_Users">
+      <EntityTypeMapping TypeName="ISchool.Data.isch_Users">
+        <MappingFragment StoreEntitySet="isch_Users">
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="u_Name" ColumnName="u_Name" />
+          <ScalarProperty Name="u_RealyName" ColumnName="u_RealyName" />
+          <ScalarProperty Name="u_Pass" ColumnName="u_Pass" />
+          <ScalarProperty Name="u_Permission" ColumnName="u_Permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ISchool.Data.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\ISchool.Model.dll.config
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\ISchool.Model.dll
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\ISchool.Model.pdb
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.dll
+C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.pdb
