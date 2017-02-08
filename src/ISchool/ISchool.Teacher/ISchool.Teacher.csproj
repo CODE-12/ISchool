@@ -62,6 +62,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChangePassword.cs">
@@ -82,8 +88,17 @@
     <Compile Include="RegisterLoginStudent.Designer.cs">
       <DependentUpon>RegisterLoginStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterNotifyAboutStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterNotifyAboutStudent.Designer.cs">
+      <DependentUpon>RegisterNotifyAboutStudent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterLoginStudent.resx">
       <DependentUpon>RegisterLoginStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterNotifyAboutStudent.resx">
+      <DependentUpon>RegisterNotifyAboutStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

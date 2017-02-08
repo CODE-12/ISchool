@@ -29,3 +29,5 @@ D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.C
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Notifications.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.LogIn.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.RegisterLoginStudent.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Main.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.RegisterNotifyAboutStudent.resources
