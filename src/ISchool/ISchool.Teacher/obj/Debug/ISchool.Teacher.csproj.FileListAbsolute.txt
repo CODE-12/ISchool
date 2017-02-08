@@ -23,12 +23,8 @@ D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.p
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\MetroFramework.dll
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\MetroFramework.Fonts.dll
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.csprojResolveAssemblyReference.cache
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.ab.resources
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.abce.resources
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Form1.resources
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.meen.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Properties.Resources.resources
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.setiing.resources
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn.resources
-D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn11.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.csproj.GenerateResource.Cache
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.ChangePassword.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Notifications.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.LogIn.resources

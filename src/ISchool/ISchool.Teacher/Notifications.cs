@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace ISchool.Teacher
 {
-    public partial class warn11 : Form
+    public partial class Notifications : MetroForm
     {
-        public warn11()
+        public Notifications()
         {
             InitializeComponent();
+        }
+
+        private void warn11_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

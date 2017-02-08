@@ -1,6 +1,6 @@
 ﻿namespace ISchool.Teacher
 {
-    partial class warn11
+    partial class Notifications
     {
         /// <summary>
         /// Required designer variable.
@@ -45,9 +45,9 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(478, 333);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 272);
+            this.panel1.Location = new System.Drawing.Point(20, 252);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(478, 141);
             this.panel1.TabIndex = 1;
@@ -131,19 +131,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "إلى:-";
             // 
-            // warn11
+            // Notifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(478, 413);
+            this.ClientSize = new System.Drawing.Size(518, 413);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "warn11";
+            this.MaximizeBox = false;
+            this.Name = "Notifications";
+            this.Resizable = false;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "التنبهات";
+            this.Load += new System.EventHandler(this.warn11_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
