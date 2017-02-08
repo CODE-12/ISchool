@@ -15,3 +15,20 @@ C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teac
 C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.setiing.resources
 C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn.resources
 C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn11.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.exe.config
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.exe
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.exe
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\ISchool.Teacher.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\MetroFramework.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\bin\Debug\MetroFramework.Fonts.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.csprojResolveAssemblyReference.cache
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.ab.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.abce.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Form1.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.meen.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Properties.Resources.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.setiing.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.warn11.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.csproj.GenerateResource.Cache

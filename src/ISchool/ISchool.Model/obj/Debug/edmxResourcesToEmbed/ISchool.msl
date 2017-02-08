@@ -34,6 +34,7 @@
     <EntitySetMapping Name="isch_NotiFication">
       <EntityTypeMapping TypeName="ISchool.Data.isch_NotiFication">
         <MappingFragment StoreEntitySet="isch_NotiFication">
+          <ScalarProperty Name="n_ToUser" ColumnName="n_ToUser" />
           <ScalarProperty Name="n_id" ColumnName="n_id" />
           <ScalarProperty Name="n_title" ColumnName="n_title" />
           <ScalarProperty Name="n_text" ColumnName="n_text" />

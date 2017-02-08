@@ -16,7 +16,7 @@ namespace ISchool.Teacher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new meen());
+            Application.Run(new setiing());
         }
     }
 }

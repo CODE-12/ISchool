@@ -44,6 +44,8 @@
     <Property Name="n_EnterByUser" Type="Int32" Nullable="false" />
     <Property Name="n_EnterDate" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="isch_Users" Relationship="Self.FK_isch_NotiFication_isch_Users" FromRole="isch_NotiFication" ToRole="isch_Users" />
+    <Property Name="n_ToUser" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="isch_Users1" Relationship="ISchool.Data.FK_isch_NotiFication_isch_Users1" FromRole="isch_NotiFication" ToRole="isch_Users" />
   </EntityType>
   <EntityType Name="isch_Permissions">
     <Key>
@@ -129,6 +131,7 @@
     <NavigationProperty Name="isch_NotiFication" Relationship="Self.FK_isch_NotiFication_isch_Users" FromRole="isch_Users" ToRole="isch_NotiFication" />
     <NavigationProperty Name="isch_Permissions" Relationship="Self.FK_users_permissions" FromRole="isch_Users" ToRole="isch_Permissions" />
     <NavigationProperty Name="isch_Subjects" Relationship="Self.FK_isch_Subjects_isch_Users" FromRole="isch_Users" ToRole="isch_Subjects" />
+    <NavigationProperty Name="isch_NotiFication1" Relationship="ISchool.Data.FK_isch_NotiFication_isch_Users1" FromRole="isch_Users" ToRole="isch_NotiFication" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -423,5 +426,21 @@
       <End Role="isch_Users" EntitySet="isch_Users" />
       <End Role="isch_Subjects" EntitySet="isch_Subjects" />
     </AssociationSet>
+    <AssociationSet Name="FK_isch_NotiFication_isch_Users1" Association="ISchool.Data.FK_isch_NotiFication_isch_Users1">
+      <End Role="isch_Users" EntitySet="isch_Users" />
+      <End Role="isch_NotiFication" EntitySet="isch_NotiFication" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_isch_NotiFication_isch_Users1">
+    <End Type="ISchool.Data.isch_Users" Role="isch_Users" Multiplicity="1" />
+    <End Type="ISchool.Data.isch_NotiFication" Role="isch_NotiFication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Users">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="isch_NotiFication">
+        <PropertyRef Name="n_ToUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

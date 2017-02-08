@@ -8,3 +8,13 @@ C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramewor
 C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.dll
 C:\Users\user\Desktop\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\ISchool.Model.dll.config
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\ISchool.Model.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\ISchool.Model.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.xml
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.csprojResolveAssemblyReference.cache
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Model\obj\Debug\ISchool.Model.pdb

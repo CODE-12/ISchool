@@ -35,6 +35,7 @@
     <Property Name="n_title" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="n_text" Type="nvarchar" MaxLength="500" Nullable="false" />
     <Property Name="n_EnterByUser" Type="int" Nullable="false" />
+    <Property Name="n_ToUser" Type="int" Nullable="false" />
     <Property Name="n_EnterDate" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="isch_Permissions">
@@ -175,6 +176,18 @@
       </Principal>
       <Dependent Role="isch_NotiFication">
         <PropertyRef Name="n_EnterByUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_isch_NotiFication_isch_Users1">
+    <End Role="isch_Users" Type="Self.isch_Users" Multiplicity="1" />
+    <End Role="isch_NotiFication" Type="Self.isch_NotiFication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="isch_Users">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="isch_NotiFication">
+        <PropertyRef Name="n_ToUser" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -342,6 +355,10 @@
       <End Role="isch_Excuses" EntitySet="isch_Excuses" />
     </AssociationSet>
     <AssociationSet Name="FK_isch_NotiFication_isch_Users" Association="Self.FK_isch_NotiFication_isch_Users">
+      <End Role="isch_Users" EntitySet="isch_Users" />
+      <End Role="isch_NotiFication" EntitySet="isch_NotiFication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_isch_NotiFication_isch_Users1" Association="Self.FK_isch_NotiFication_isch_Users1">
       <End Role="isch_Users" EntitySet="isch_Users" />
       <End Role="isch_NotiFication" EntitySet="isch_NotiFication" />
     </AssociationSet>
