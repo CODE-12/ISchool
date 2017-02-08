@@ -28,3 +28,4 @@ D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.c
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.ChangePassword.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.Notifications.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.LogIn.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Teacher\obj\Debug\ISchool.Teacher.RegisterLoginStudent.resources

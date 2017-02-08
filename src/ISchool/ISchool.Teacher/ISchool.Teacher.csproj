@@ -76,6 +76,12 @@
     <Compile Include="Notifications.Designer.cs">
       <DependentUpon>Notifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterLoginStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterLoginStudent.Designer.cs">
+      <DependentUpon>RegisterLoginStudent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Notifications.resx">
       <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterLoginStudent.resx">
+      <DependentUpon>RegisterLoginStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
