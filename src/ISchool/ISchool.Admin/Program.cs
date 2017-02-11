@@ -16,7 +16,7 @@ namespace ISchool.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());ضع الواجهة المرادة هنا
+            Application.Run(new Wizard.MainWizard());
         }
     }
 }
