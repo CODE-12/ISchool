@@ -9,3 +9,4 @@ D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\obj\Debug\ISchool.Admin.pdb
 D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\MetroFramework.dll
 D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\MetroFramework.Fonts.dll
 D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\obj\Debug\ISchool.Admin.Wizard.MainWizard.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\obj\Debug\ISchool.Admin.Wizard.SecondaryWizard.resources

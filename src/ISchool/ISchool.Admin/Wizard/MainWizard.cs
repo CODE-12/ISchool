@@ -17,5 +17,14 @@ namespace ISchool.Admin.Wizard
         {
             InitializeComponent();
         }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            if (this.metroCheckBox1.Checked)
+            {
+                new SecondaryWizard().ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

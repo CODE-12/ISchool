@@ -17,5 +17,11 @@ namespace ISchool.Admin.Wizard
         {
             InitializeComponent();
         }
+
+        private void metroLink2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MessageBox.Show("....الرجاء التواصل مع الدعم الفني وشكرا", "الدعم الفني", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+        }
     }
 }

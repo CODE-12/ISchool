@@ -46,6 +46,7 @@
             this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLink1.TabIndex = 0;
             this.metroLink1.Text = "التالي→";
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // label1
             // 
