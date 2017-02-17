@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchool.Admin", "ISchool.Ad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchool.Teacher", "ISchool.Teacher\ISchool.Teacher.csproj", "{FB76E585-59A7-494F-8DA0-8D10D8A62AA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISchool.ExcelAlgorithm", "ISchool.ExcelAlgorithm\ISchool.ExcelAlgorithm.csproj", "{8E23F0E3-81EB-4571-B7E6-5A8E08C32D97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FB76E585-59A7-494F-8DA0-8D10D8A62AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB76E585-59A7-494F-8DA0-8D10D8A62AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB76E585-59A7-494F-8DA0-8D10D8A62AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E23F0E3-81EB-4571-B7E6-5A8E08C32D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E23F0E3-81EB-4571-B7E6-5A8E08C32D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E23F0E3-81EB-4571-B7E6-5A8E08C32D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E23F0E3-81EB-4571-B7E6-5A8E08C32D97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
