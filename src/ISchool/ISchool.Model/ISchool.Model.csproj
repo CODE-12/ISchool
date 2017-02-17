@@ -93,6 +93,7 @@
     <Compile Include="isch_Users.cs">
       <DependentUpon>ISchool.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProjectModel\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>ISchool.tt</DependentUpon>

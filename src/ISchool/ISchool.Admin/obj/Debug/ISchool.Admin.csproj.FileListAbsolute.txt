@@ -10,3 +10,10 @@ D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\MetroFramework.dll
 D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\MetroFramework.Fonts.dll
 D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\obj\Debug\ISchool.Admin.Wizard.MainWizard.resources
 D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\obj\Debug\ISchool.Admin.Wizard.SecondaryWizard.resources
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\ISchool.ExcelAlgorithm.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\ISchool.Model.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\EntityFramework.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\ISchool.ExcelAlgorithm.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\ISchool.Model.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\bin\Debug\EntityFramework.xml
+D:\Mains Project\ISchool\src\ISchool\ISchool.Admin\obj\Debug\ISchool.Admin.csproj.ResolveComReference.cache

@@ -1,0 +1,10 @@
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\bin\Debug\ISchool.ExcelAlgorithm.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\bin\Debug\ISchool.ExcelAlgorithm.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\bin\Debug\ISchool.Model.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\bin\Debug\EntityFramework.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\bin\Debug\ISchool.Model.pdb
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\bin\Debug\EntityFramework.xml
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\obj\Debug\ISchool.ExcelAlgorithm.csprojResolveAssemblyReference.cache
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\obj\Debug\ISchool.ExcelAlgorithm.csproj.ResolveComReference.cache
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\obj\Debug\ISchool.ExcelAlgorithm.dll
+D:\Mains Project\ISchool\src\ISchool\ISchool.ExcelAlgorithm\obj\Debug\ISchool.ExcelAlgorithm.pdb

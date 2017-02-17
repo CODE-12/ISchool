@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using ISchool.ExcelAlgorithm;
 
 namespace ISchool.Admin.Wizard
 {
@@ -22,6 +23,14 @@ namespace ISchool.Admin.Wizard
         {
             this.Close();
             MessageBox.Show("....الرجاء التواصل مع الدعم الفني وشكرا", "الدعم الفني", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.ShowDialog();
+            IExcelAlgo DataList = new StudentDataList(opf.FileName);
+            dataGridView1.DataSource = await DataList.Load();
         }
     }
 }
