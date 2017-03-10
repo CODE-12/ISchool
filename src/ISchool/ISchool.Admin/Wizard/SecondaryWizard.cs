@@ -29,6 +29,8 @@ namespace ISchool.Admin.Wizard
         {
             OpenFileDialog opf = new OpenFileDialog();
             opf.ShowDialog();
+            if (string.IsNullOrWhiteSpace(opf.FileName)) 
+                return;
             IExcelAlgo DataList = new StudentDataList(opf.FileName);
             dataGridView1.DataSource = await DataList.Load();
         }
