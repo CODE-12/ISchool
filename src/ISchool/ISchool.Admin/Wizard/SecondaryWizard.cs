@@ -31,8 +31,8 @@ namespace ISchool.Admin.Wizard
             opf.ShowDialog();
             if (string.IsNullOrWhiteSpace(opf.FileName)) 
                 return;
-            IExcelAlgo DataList = new StudentDataList(opf.FileName);
-            dataGridView1.DataSource = await DataList.Load();
+            IExcelAlgo dataList = new StudentDataList(opf.FileName);
+            dataGridView1.DataSource = await dataList.Load();
         }
     }
 }

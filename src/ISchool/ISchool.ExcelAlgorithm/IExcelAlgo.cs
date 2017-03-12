@@ -10,16 +10,16 @@ namespace ISchool.ExcelAlgorithm
 {
     public abstract class IExcelAlgo
     {
-        protected Excel.Workbook _book { get; set; }
-        protected Excel.Worksheet _sheet { get; set; }
-        protected string _path { get; set; }
-        protected DataTable _result { get; set; }
+        protected Excel.Workbook Book { get; set; }
+        protected Excel.Worksheet Sheet { get; set; }
+        protected string Path { get; set; }
+        protected DataTable Result { get; set; }
         public IExcelAlgo(string path)
         {
-            this._path = path;
+            this.Path = path;
             Excel.Application app = new Excel.Application();
-            _book = app.Workbooks.Open(path, 0, true, 5, "", "", true, Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            _result = new DataTable();
+            Book = app.Workbooks.Open(path, 0, true, 5, "", "", true, Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            Result = new DataTable();
         }
 
         public abstract Task<DataTable> Load();

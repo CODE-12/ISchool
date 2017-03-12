@@ -11,16 +11,16 @@ namespace ISchool.ExcelAlgorithm
     public class StudentDataList : IExcelAlgo
     {
         /*Start Vars*/
-        private int _counter { get; set; }
-        private int _nameC { get; set; }
-        private int _nationalC { get; set; }
-        private int _specialC { get; set; }
-        private int _enterDC { get; set; }
-        private int _idTypeC { get; set; }
-        private int _idNumC { get; set; }
-        private int _brDC { get; set; }
-        private int _statusC { get; set; }
-        private int _gadeTypeC { get; set; }
+        private int Counter { get; set; }
+        private int NameC { get; set; }
+        private int NationalC { get; set; }
+        private int SpecialC { get; set; }
+        private int EnterDc { get; set; }
+        private int IdTypeC { get; set; }
+        private int IdNumC { get; set; }
+        private int BrDc { get; set; }
+        private int StatusC { get; set; }
+        private int GadeTypeC { get; set; }
         /*End Vars*/
         public StudentDataList(string path) : base(path)
         { }
@@ -28,57 +28,57 @@ namespace ISchool.ExcelAlgorithm
         public async override Task<DataTable> Load()
         {
             int pageNumber = 1;
-            _sheet = (Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(1);
-            _counter = 1;
-            _nameC = 1;
-            _nationalC = 1;
-            _specialC = 1;
-            _enterDC = 1;
-            _idTypeC = 1;
-            _idNumC = 1;
-            _brDC = 1;
-            _statusC = 1;
-            _gadeTypeC = 1;
+            Sheet = (Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(1);
+            Counter = 1;
+            NameC = 1;
+            NationalC = 1;
+            SpecialC = 1;
+            EnterDc = 1;
+            IdTypeC = 1;
+            IdNumC = 1;
+            BrDc = 1;
+            StatusC = 1;
+            GadeTypeC = 1;
             for (int i = 1; i < 35; i++)//Rows
                 for (int i2 = 1; i2 < 35; i2++)//Column
                 {
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "اسم الطالب")
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "اسم الطالب")
                     {
-                        _nameC = i2;
-                        _counter = i;
+                        NameC = i2;
+                        Counter = i;
                     }
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "الجنسية")
-                        _nationalC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "التخصص")
-                        _specialC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "سنة")
-                        _enterDC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "نوعها")
-                        _idTypeC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "رقمها")
-                        _idNumC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "تاريخ الميلاد")
-                        _brDC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "سجل الطالب")
-                        _statusC = i2;
-                    if (Convert.ToString(_sheet.Cells[i, i2].Value) == "حالة القيد")
-                        _gadeTypeC = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "الجنسية")
+                        NationalC = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "التخصص")
+                        SpecialC = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "سنة")
+                        EnterDc = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "نوعها")
+                        IdTypeC = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "رقمها")
+                        IdNumC = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "تاريخ الميلاد")
+                        BrDc = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "سجل الطالب")
+                        StatusC = i2;
+                    if (Convert.ToString(Sheet.Cells[i, i2].Value) == "حالة القيد")
+                        GadeTypeC = i2;
                 }
             List<Student> students = new List<Student>();
             try
             {
                 while (true)
                 {
-                    Student s1 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 2);
-                    Student s2 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 4);
-                    Student s3 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 6);
-                    Student s4 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 8);
-                    Student s5 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 10);
-                    Student s6 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 12);
-                    Student s7 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 14);
-                    Student s8 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 16);
-                    Student s9 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 18);
-                    Student s10 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)_book.Worksheets.get_Item(pageNumber), _counter + 20);
+                    Student s1 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 2);
+                    Student s2 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 4);
+                    Student s3 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 6);
+                    Student s4 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 8);
+                    Student s5 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 10);
+                    Student s6 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 12);
+                    Student s7 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 14);
+                    Student s8 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 16);
+                    Student s9 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 18);
+                    Student s10 = GetStudentData((Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(pageNumber), Counter + 20);
                     if (s1 == null)
                         throw new Exception();
                     students.Add(s1);
@@ -114,7 +114,7 @@ namespace ISchool.ExcelAlgorithm
             }
             catch (Exception)
             { }
-            this._result.Columns.AddRange(new DataColumn[] {
+            this.Result.Columns.AddRange(new DataColumn[] {
                 new DataColumn("اسم الطالب"),
                 new DataColumn("التخصص"),
                 new DataColumn("الجنسية"),
@@ -127,28 +127,28 @@ namespace ISchool.ExcelAlgorithm
             });
             foreach (Student item in students)
             {
-                this._result.Rows.Add(item.Name, item.Specialize, item.Nationality, item.Enterdate, item.IdType, item.IdNumber, item.BrDate, item.StudentStatus, item.GadeStatus);
+                this.Result.Rows.Add(item.Name, item.Specialize, item.Nationality, item.Enterdate, item.IdType, item.IdNumber, item.BrDate, item.StudentStatus, item.GadeStatus);
             }
-            _sheet = null;
-            _book = null;
-            return _result;
+            Sheet = null;
+            Book = null;
+            return Result;
         }
 
         private Student GetStudentData(Microsoft.Office.Interop.Excel.Worksheet Sheet, int Row)
         {
-            if (Sheet.Cells[Row, _nameC].Value == null)
+            if (Sheet.Cells[Row, NameC].Value == null)
                 return null;
             Student stu = new Student()
             {
-                Name = Sheet.Cells[Row, _nameC].Value,
-                Specialize = Sheet.Cells[Row, _specialC].Value,
-                Nationality = Sheet.Cells[Row, _nationalC].Value,
-                Enterdate = Sheet.Cells[Row, _enterDC].Value,
-                IdType = Sheet.Cells[Row, _idTypeC].Value,
-                IdNumber = Sheet.Cells[Row, _idNumC].Value,
-                BrDate = Sheet.Cells[Row, _brDC].Value,
-                StudentStatus = Sheet.Cells[Row, _statusC].Value,
-                GadeStatus = Sheet.Cells[Row, _gadeTypeC].Value
+                Name = Sheet.Cells[Row, NameC].Value,
+                Specialize = Sheet.Cells[Row, SpecialC].Value,
+                Nationality = Sheet.Cells[Row, NationalC].Value,
+                Enterdate = Sheet.Cells[Row, EnterDc].Value,
+                IdType = Sheet.Cells[Row, IdTypeC].Value,
+                IdNumber = Sheet.Cells[Row, IdNumC].Value,
+                BrDate = Sheet.Cells[Row, BrDc].Value,
+                StudentStatus = Sheet.Cells[Row, StatusC].Value,
+                GadeStatus = Sheet.Cells[Row, GadeTypeC].Value
             };
             return stu;
         }
